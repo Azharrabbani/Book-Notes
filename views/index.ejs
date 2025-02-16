@@ -1,64 +1,98 @@
 <%- include("partials/header.ejs") %>
-
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="https://charatoon.com/photo/3639.png" alt="" width="80">
-        <span class="fs-4">Note Buddy</span>
-      </a>
-    </header>
-</div>
-
-<section id="book-section" class="container">
-    <div class="type-section d-flex gap-3">
-        <h3>Book Type</h3>
-        <a href="/add">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-            </svg>
+<body>
+  <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <img src="https://charatoon.com/photo/3639.png" alt="" width="80">
+          <span class="fs-4">Note Buddy</span>
         </a>
-    </div>
-    <hr>
+      </header>
+  </div>
 
-    <div class="container d-flex gap-5 justify-content-center">
-        <div class="card">
-            <div class="card-details">
-              <p class="text-title">Book title</p>
-            </div>
-            <p class="text-body">Author</p>
-            <p class="text-body text-end">Date</p>
-            <button class="card-button">More info</button>
-        </div>
-        <div class="card">
-            <div class="card-details">
-              <p class="text-title">Book title</p>
-            </div>
-            <p class="text-body">Author</p>
-            <p class="text-body text-end">Date</p>
-            <button class="card-button">More info</button>
-        </div>
-        <div class="card">
-            <div class="card-details">
-              <p class="text-title">Book title</p>
-            </div>
-            <p class="text-body">Author</p>
-            <p class="text-body text-end">Date</p>
-            <button class="card-button">More info</button>
-        </div>
-        <div class="card">
-            <div class="card-details">
-              <p class="text-title">Book title</p>
-            </div>
-            <p class="text-body">Author</p>
-            <p class="text-body text-end">Date</p>
-            <button class="card-button">More info</button>
-        </div>
-    </div>
-</section>
+  <section id="book-section" class="container">
+      <div class="type-section d-flex gap-3">
+          <h3>Book Type</h3>
+          <a href="/add">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+              </svg>
+          </a>
+      </div>
+      <hr>
 
-<div class="container text-end mt-5">
-  <a href="" class="add-type">+ Book Type</a>
+      <div class="container d-flex gap-5 justify-content-center">
+          <div class="card">
+              <div class="card-details">
+                <p class="text-title">Book title</p>
+              </div>
+              <p class="text-body">Author</p>
+              <p class="text-body text-end">Date</p>
+              <a href="/book">
+                <button class="card-button">More info</button>
+              </a>
+          </div>
+          <div class="card">
+              <div class="card-details">
+                <p class="text-title">Book title</p>
+              </div>
+              <p class="text-body">Author</p>
+              <p class="text-body text-end">Date</p>
+              <a href="/book">
+                <button class="card-button">More info</button>
+              </a>
+          </div>
+          <div class="card">
+              <div class="card-details">
+                <p class="text-title">Book title</p>
+              </div>
+              <p class="text-body">Author</p>
+              <p class="text-body text-end">Date</p>
+              <a href="/book">
+                <button class="card-button">More info</button>
+              </a>
+          </div>
+          <div class="card">
+              <div class="card-details">
+                <p class="text-title">Book title</p>
+              </div>
+              <p class="text-body">Author</p>
+              <p class="text-body text-end">Date</p>
+              <a href="/book">
+                <button class="card-button">More info</button>
+              </a>
+          </div>
+      </div>
+  </section>
 
-</div>
+  <div class="container text-end mt-5">
+    <form action="">
+      <input type="text" id="type-input" placeholder="Insert type" hidden="true">
+      <button id="cancel-button" class="cancel-type" hidden="true" onclick="cancelType()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+      </svg></button>
+      <button id="submit-type" class="submit-type" hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+      </svg></button>
+    </form>
 
-<%- include("partials/footer.ejs") %>
+    <button id="add-button" class="add-type" onclick="addType()">+ Book Type</a>
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+  <script>
+    function addType() {
+      document.getElementById("type-input").removeAttribute("hidden");
+      document.getElementById("cancel-button").removeAttribute("hidden");
+      document.getElementById("submit-type").removeAttribute("hidden");
+      document.getElementById("add-button").setAttribute("hidden", true);
+    }
+
+    function cancelType(){
+      document.getElementById("type-input").setAttribute("hidden", true);
+      document.getElementById("cancel-button").setAttribute("hidden", true);
+      document.getElementById("submit-type").setAttribute("hidden", true);
+      document.getElementById("add-button").removeAttribute("hidden");
+    }
+  </script>
+  </body>
+</html>

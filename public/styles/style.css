@@ -231,6 +231,6 @@ html, body {
     border: none;
 }
 
-::placeholder{
+.input-form::placeholder{
     color: white !important;
 }

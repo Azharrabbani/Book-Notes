@@ -18,6 +18,10 @@ app.get('/add', (req, res) => {
     res.render('addPage.ejs');
 })
 
+app.get('/book', (req, res) => {
+    res.render('detail.ejs');
+})
+
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 })
