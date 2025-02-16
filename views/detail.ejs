@@ -1,48 +1,84 @@
 <%- include("partials/header.ejs") %>
 
-<body>
+<body id="detail-section">
     <div class="header d-flex justify-content-center">
-        <div class="d-block text-center">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quisquam a distinctio alias minima expedita harum numquam perspiciatis. Saepe magnam tempore maxime doloremque porro? Voluptatibus sapiente totam architecto tenetur natus.</h1>
+        <div class="d-block text-center text-white">
+            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, et fugit, architecto dignissimos reiciendis repellat numquam natus quia nostrum impedit quod ad corrupti quis corporis aliquid molestias, possimus enim totam.</h2>
             <p>by lore</p>
         </div>
     </div>
 
-    <section class="container">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum vitae earum soluta, ea officia laudantium. Ullam, exercitationem minima autem dignissimos ex incidunt atque tempora voluptatibus esse, accusamus, reprehenderit eum!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi possimus excepturi incidunt? Corrupti quos sit, pariatur odit similique quis dolores id cumque, tempora quas dolore praesentium obcaecati ipsam at aspernatur?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorem quaerat aut quasi ex non expedita deserunt, porro nihil vel asperiores quidem commodi fuga doloremque, voluptatem sequi dolore odit quos?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae hic vel blanditiis? Velit nihil amet dolorum eveniet iste nisi! Expedita omnis, mollitia deleniti iure et accusantium cum neque velit necessitatibus.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum quis excepturi. Itaque recusandae possimus voluptas nisi expedita magnam accusantium totam tempora minus, quo animi necessitatibus voluptatibus, dolor perferendis libero.
-                </div>
-              </div>
-            </div>
-          </div>
-    </section>
-    
+    <section class="container mt-5 py-5 px-3 rounded-4" id="book-detail">
+        <img src="https://media.istockphoto.com/id/153952958/photo/blank-hardcover-book-with-copy-space.jpg?s=612x612&w=0&k=20&c=0GwreFm2LXIR0_irlkOvvz45hfRlova_pTZr-v32Pyg=" alt="" class="mx-auto d-block mb-5" width="20%">
+        
+        <div class="container d-flex gap-2 my-4">
+            <button onclick="showDesc()">Book description</button>
+            <button onclick="showNotes()">Your notes</button>
+        </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div class="container" id="book-desc">
+           Desc
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur officia amet fugit sint architecto, explicabo accusamus voluptatem? Inventore fugit exercitationem pariatur aperiam aliquam cum aspernatur officia quasi deleniti suscipit!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed voluptatibus sit vitae? Perspiciatis, inventore quia aperiam perferendis suscipit nemo magni officiis nulla nostrum, eum deserunt qui odio illo voluptate?
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, amet? Architecto possimus eos iusto quas eaque pariatur ab commodi nisi doloremque animi vitae eum omnis id voluptates, tenetur optio autem.
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit nesciunt fuga accusamus commodi optio, repellendus vel exercitationem dolorum, facere culpa enim nisi ad deleniti ab doloremque. Non nemo deleniti quo.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor doloribus fugit, quia molestias eveniet illum neque id nostrum quos voluptatem, nisi minima possimus. Magni obcaecati voluptatibus aliquam et delectus.
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque at culpa dignissimos quaerat ut magni, repellendus consequuntur necessitatibus sunt doloremque neque voluptas eligendi nulla qui laudantium dolorum, illo, placeat minima!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste ratione recusandae cum a, quo, necessitatibus iusto rem exercitationem optio, ad alias nesciunt excepturi in itaque corrupti autem quod dolorem!
+           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae incidunt amet dolorum, tempora inventore aliquam quaerat necessitatibus minima unde, dignissimos et facere ex. Nisi quia ab quos iste corrupti!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolorum totam distinctio voluptatem aliquid ipsam nesciunt doloremque autem atque, maiores ipsum debitis error iste assumenda mollitia, doloribus corporis accusamus hic.
+        </div>
+
+        <div class="container" id="book-notes" hidden="true">
+            Notes
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur officia amet fugit sint architecto, explicabo accusamus voluptatem? Inventore fugit exercitationem pariatur aperiam aliquam cum aspernatur officia quasi deleniti suscipit!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed voluptatibus sit vitae? Perspiciatis, inventore quia aperiam perferendis suscipit nemo magni officiis nulla nostrum, eum deserunt qui odio illo voluptate?
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, amet? Architecto possimus eos iusto quas eaque pariatur ab commodi nisi doloremque animi vitae eum omnis id voluptates, tenetur optio autem.
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit nesciunt fuga accusamus commodi optio, repellendus vel exercitationem dolorum, facere culpa enim nisi ad deleniti ab doloremque. Non nemo deleniti quo.
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor doloribus fugit, quia molestias eveniet illum neque id nostrum quos voluptatem, nisi minima possimus. Magni obcaecati voluptatibus aliquam et delectus.
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque at culpa dignissimos quaerat ut magni, repellendus consequuntur necessitatibus sunt doloremque neque voluptas eligendi nulla qui laudantium dolorum, illo, placeat minima!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iste ratione recusandae cum a, quo, necessitatibus iusto rem exercitationem optio, ad alias nesciunt excepturi in itaque corrupti autem quod dolorem!
+           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae incidunt amet dolorum, tempora inventore aliquam quaerat necessitatibus minima unde, dignissimos et facere ex. Nisi quia ab quos iste corrupti!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolorum totam distinctio voluptatem aliquid ipsam nesciunt doloremque autem atque, maiores ipsum debitis error iste assumenda mollitia, doloribus corporis accusamus hic.
+           <div class="d-flex justify-content-center gap-2 mt-3">
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Note</button>
+                <button>Delete Note</button>
+           </div>
+        </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Your Notes</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <textarea class="form-control border-0" id="exampleFormControlTextarea1" rows="20" placeholder="Insert your notes"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+    <br><br>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function showDesc(){
+            document.getElementById("book-notes").setAttribute("hidden", true);
+            document.getElementById("book-desc").removeAttribute("hidden");
+        }
+
+        function showNotes(){
+            document.getElementById("book-desc").setAttribute("hidden", true);
+            document.getElementById("book-notes").removeAttribute("hidden");
+        }
+    </script>
 </body>
 </html>

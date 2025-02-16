@@ -225,7 +225,7 @@ html, body {
     border-radius: 1rem;
 }
 
-.form-control{
+.form-container{
     border-radius: 11px !important;
     background-color: #00000083 !important;
     border: none;
@@ -233,4 +233,24 @@ html, body {
 
 .input-form::placeholder{
     color: white !important;
+}
+
+.header{
+  background-image: url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?cs=srgb&dl=pexels-freestockpro-376368.jpg&fm=jpg");
+  background-size: cover;
+  padding: 3rem 14rem;
+}
+
+#book-detail{
+  background-image: linear-gradient(to bottom, #c6e7ff8a, #d4f6ff8a, #fbfbfb79, #ffddae8a);
+  box-shadow:12px 9px 16px rgba(255, 166, 1, 0.89);
+}
+
+#detail-section{
+  background-image: linear-gradient(to bottom, #89A8B2, #B3C8CF, #E5E1DA, #F1F0E8);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  
 }
