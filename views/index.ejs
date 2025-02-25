@@ -10,73 +10,55 @@
   </div>
 
   <section id="book-section" class="container">
-      <div class="type-section d-flex gap-3">
-          <h3>Book Type</h3>
-          <a href="/add">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
-              </svg>
-          </a>
-      </div>
-      <hr>
+      <% if (locals.types.length == 0){ %>
+        <div class="container text-end mt-5 d-flex justify-content-end gap-1">
+          <form action="/type" method="POST">
+            <input type="text" id="type-input" placeholder="Insert type" hidden="true" name="book_type">
+            <button type="submit" id="submit-type" class="submit-type" hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+            </svg></button>
+          </form>
+          <button id="cancel-button" class="cancel-type" hidden="true" onclick="cancelType()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg></button>
+      
+          <button id="add-button" class="add-type" onclick="addType()">+ Book Type</a>
+        </div>
+      <% } else{ %>
+        <div class="type-section d-flex gap-3">
+            <h3><%= types.type_title %></h3>
+            <a href="/add">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+                </svg>
+            </a>
+        </div>
+        <hr>
+        
+        <div class="container d-flex gap-5 justify-content-center">
+          <% if (locals.books.length == 0){ %>
+              <h2>empty</h2>
+          <% } else{ %>
+              <% for (let data of books){ %>
+                <div class="card">
+                    <div class="card-details">
+                      <p class="text-title"><%= data.title %></p>
+                    </div>
+                    <p class="text-body"><%= data.author %></p>
+                    <p class="text-body text-end"><%= data.date %></p>
+                    <a href="/book" >
+                      <button class="card-button">More info</button>
+                    </a>
+                </div>
+              <% } %>
+          <% } %>
+        </div>
+      <% } %>
 
-      <div class="container d-flex gap-5 justify-content-center">
-          <div class="card">
-              <div class="card-details">
-                <p class="text-title">Book title</p>
-              </div>
-              <p class="text-body">Author</p>
-              <p class="text-body text-end">Date</p>
-              <a href="/book" target="blank">
-                <button class="card-button">More info</button>
-              </a>
-          </div>
-          <div class="card">
-              <div class="card-details">
-                <p class="text-title">Book title</p>
-              </div>
-              <p class="text-body">Author</p>
-              <p class="text-body text-end">Date</p>
-              <a href="/book" target="blank">
-                <button class="card-button">More info</button>
-              </a>
-          </div>
-          <div class="card">
-              <div class="card-details">
-                <p class="text-title">Book title</p>
-              </div>
-              <p class="text-body">Author</p>
-              <p class="text-body text-end">Date</p>
-              <a href="/book" target="blank">
-                <button class="card-button">More info</button>
-              </a>
-          </div>
-          <div class="card">
-              <div class="card-details">
-                <p class="text-title">Book title</p>
-              </div>
-              <p class="text-body">Author</p>
-              <p class="text-body text-end">Date</p>
-              <a href="/book" target="blank">
-                <button class="card-button">More info</button>
-              </a>
-          </div>
-      </div>
+      
+
   </section>
 
-  <div class="container text-end mt-5">
-    <form action="">
-      <input type="text" id="type-input" placeholder="Insert type" hidden="true">
-      <button id="cancel-button" class="cancel-type" hidden="true" onclick="cancelType()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-      </svg></button>
-      <button id="submit-type" class="submit-type" hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
-      </svg></button>
-    </form>
-
-    <button id="add-button" class="add-type" onclick="addType()">+ Book Type</a>
-  </div>
 
   <%- include("partials/footer.ejs") %>
   <script>
